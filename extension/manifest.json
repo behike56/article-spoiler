@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Article Spoiler",
+  "version": "0.1.0",
+  "description": "開いている Substack 記事をローカル変換用に保存します。",
+  "permissions": ["activeTab", "scripting", "storage", "downloads"],
+  "optional_host_permissions": ["https://*/*"],
+  "action": {"default_title": "この記事を保存"},
+  "background": {"service_worker": "background.js"}
+}

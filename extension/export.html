@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><title>記事を保存 — Article Spoiler</title>
+<style>body{font:16px/1.7 system-ui;max-width:720px;margin:60px auto;padding:24px}button{padding:12px 24px;font:inherit}#status{white-space:pre-wrap}</style>
+<h1>記事を保存</h1>
+<p id="title"></p>
+<p>元の記事タブで末尾まで読み込まれ、購読記事の全文が表示されていることを確認してください。</p>
+<label><input id="confirmed" type="checkbox"> 全文を確認しました</label>
+<p><button id="save" disabled>記事と画像を ZIP に保存</button></p>
+<p id="status" role="status"></p>
+<p>ZIP には有料記事の内容が含まれます。変換後、不要になった ZIP は削除してください。</p>
+<script src="zip.js"></script><script src="export.js"></script>
+</html>

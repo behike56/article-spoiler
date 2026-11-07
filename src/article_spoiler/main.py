@@ -1,12 +1,24 @@
 import argparse
+import sys
 from pathlib import Path
 
 from article_spoiler.extract import process_html
 
 
 def main() -> None:
+    if len(sys.argv) > 1 and sys.argv[1] == "import":
+        from article_spoiler.archive import archive_main
+
+        archive_main(sys.argv[2:])
+        return
+    if len(sys.argv) > 1 and sys.argv[1] in {"auth", "fetch"}:
+        from article_spoiler.remote import remote_main
+
+        remote_main(sys.argv[1:])
+        return
     parser = argparse.ArgumentParser(
-        description="Extract Substack HTML articles to Markdown."
+        description="Extract Substack HTML articles to Markdown.",
+        epilog="Commands: import ARCHIVE.zip, auth login, fetch URL. Run each command with --help for options.",
     )
     parser.add_argument(
         "--input",

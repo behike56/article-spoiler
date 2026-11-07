@@ -20,5 +20,5 @@ wheels/
 # App datas
 input/*
 !input/.gitkeep
-output/*
-!output/.gitkeep
+output/
+jpn_article/
